@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Songs</title>
+    <link href="../static/style.css" rel="stylesheet">
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <form class="form-signin" action="{{url_for('last_tracks')}}" method="post">
+        <h1 class="mb-3 font-weight-normal">Recent {{num}} Songs</h1>
+        <ol>
+            {%for index in last_played_tracks%}
+            <li>{{index}}</li>
+            {%endfor%}
+        </ol>
+        <h2 class="mb-3 font-weight-normal">Enter the songs you'd like to use as seeds from the list above, values must
+            be seperated by a space! (AT MOST 5 VALUES)</h2>
+        <input type="text" id="room" name="seeds" class="form-control" placeholder="Song Seeds" required /><br>
+        <button class="btn btn-lg btn-primary btn-block" value="submit">Make playlist</button>
+    </form>
+</body>
+
+</html>

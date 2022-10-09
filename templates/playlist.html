@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Information</title>
+    <link href="../static/style.css" rel="stylesheet">
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <form class="form-signin" action="{{url_for('playlist')}}" method="post">
+        <h1 class="mb-3 font-weight-normal">Enter the Required Information</h1>
+        <h4 class="mb-3 font-weight-normal">Enter Your Username ID</h4>
+        <input type="text" id="room" name="user_id" class="form-control" placeholder="Username ID" required /><br>
+        <h4 class="mb-3 font-weight-normal">Enter the amount to visualize (AT MOST 50)</h4>
+        <input type="number" id="room" name="vis_num" class="form-control" placeholder="Visualize Number"
+            required /><br>
+        <!-- <h6 class="mb-3 font-weight-normal">Enter the songs you'd like to use as seeds from the list above, values must
+            be seperated by commas! (AT MOST 5 VALUES)</h6>
+        <input type="text" id="room" name="seeds" class="form-control" placeholder="Song Seeds" require /><br> -->
+        <h4 class="mb-3 font-weight-normal">Enter the amont of songs you want on the playlist (AT MOST 100)</h4>
+        <input type="number" id="room" name="length" class="form-control" placeholder="Playlist length" required /><br>
+        <h4 class="mb-3 font-weight-normal">Enter the playlists name</h4>
+        <input type="text" id="room" name="play_name" class="form-control" placeholder="Playlist name" required /><br>
+        <button class="btn btn-lg btn-primary btn-block" value="submit">Select Songs</button>
+    </form>
+</body>
+
+</html>
